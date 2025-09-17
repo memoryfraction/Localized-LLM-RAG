@@ -5,13 +5,13 @@ In an era where data privacy is paramount, building your ownLocal Language Model
 According to the steps in this article, you can quickly build a local LLM +Retrieval-Augmented Generation (The RAG) system provides detailed steps and MVP codes to demonstrate to the outside world your LLM/AI Engineer capabilities and provide strong evidence for your transformation from a traditional software engineer to an AI/ML Engineer.
 
 # 2 Technology Stack and Terminology
-Python 3: Python is a versatile programming language that you can use to write code for RAG applications.
-ChromaDB: A vector database for storing and managing our data embeddings.
+* Python 3: Python is a versatile programming language that you can use to write code for RAG applications.
+* ChromaDB: A vector database for storing and managing our data embeddings.
 To be: Download and serve the custom LLM on our local machine.
-LangchainA development framework for building applications based on large language models (LLMs). It addresses the complexity of integrating, managing, and scaling LLMs within applications. In this local RAG system, it plays a central role in connecting large models, vector libraries, and application logic.
+* Langchain: A development framework for building applications based on large language models (LLMs). It addresses the complexity of integrating, managing, and scaling LLMs within applications. In this local RAG system, it plays a central role in connecting large models, vector libraries, and application logic.
 
-LangChain = "Rapid Development of Chain-Based LLM Toolbox" for the Python Ecosystem
-Semantic Kernel = "Composable Intelligent Agent Platform" for the C#/.NET Ecosystem
+* LangChain = "Rapid Development of Chain-Based LLM Toolbox" for the Python Ecosystem
+* Semantic Kernel = "Composable Intelligent Agent Platform" for the C#/.NET Ecosystem
 
 # 3. Set up the environment
 ## 3.1 Installing Python Environment and Miniconda
@@ -28,9 +28,9 @@ Install miniconda
 Create a Python 3.10 virtual environment
 second create -p D:\ProgramData\PythonVirtualEnvs\rag python=3.11
 
--p or --prefix → Specify the full path of the environment
-python=3.10 → Use Python 3.10
-After the creation is complete, Conda will prompt you to confirm the installation of the package. Press y to confirm.
+* -p or --prefix → Specify the full path of the environment
+* python=3.10 → Use Python 3.10
+<br>After the creation is complete, Conda will prompt you to confirm the installation of the package. Press y to confirm.
 Activate the virtual environment
 conda activate D:\ProgramData\PythonVirtualEnvs\rat
 
@@ -64,7 +64,7 @@ ollama serve # Run the ollama model
 
 
 # 4 Code part
-app.pyThis is the main file for the Flask application. It defines the routes for embedding files into the vector database and retrieving responses from the model.
+app.py  This is the main file for the Flask application. It defines the routes for embedding files into the vector database and retrieving responses from the model.
 embed.py- This module handles the embedding process, including saving uploaded files, loading and splitting data, and adding documents to the vector database.
 
 query.py - This module processes user queries by generating multiple versions of the query, retrieving relevant documents, and providing answers based on the context.
