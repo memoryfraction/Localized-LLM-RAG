@@ -45,19 +45,22 @@ pip install flask python-dotenv langchain langchain-community faiss-cpu chromadb
 Download link: https://ollama.com/download
 
 2 Install Ollama and find the installation path
+``` base
 C:\INsers\<username>\AppData\Local\Programs\THEllama\llama.exe
-
+```
 
 3 Common commands
+``` base
 Cont. C:\INsers\<username>\AppData\Local\Programs\THEcalls\ # Switch path
 ollama --Version # View ollama version
 Ollama pull mistral # Install LLM mistral
 ollama pull nomic-embed-text # Install embedding tool
 ollama serve # Run the ollama model
+```
 
 
-
-Ollama list renderings
+![Ollama List](https://github.com/memoryfraction/Localized-LLM-RAG/blob/main/images/OLLAMA%20LIST.png?raw=true) 
+<br>Ollama list renderings
 
 
 # 4 Code part
@@ -69,9 +72,11 @@ query.py - This module processes user queries by generating multiple versions of
 Get_vector_db.py - This module initializes and returns a vector database instance for storing and retrieving document embeddings.
 
 .env - Storing your environment variables
+
 # 5 Results View
 ## 5.1 Startupapp.py
 The following output appears, indicating success
+``` base
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
@@ -80,20 +85,20 @@ Press CTRL+C to quit
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 999-250-881
-
+```
 
 ## 5.2 Sending Requests
-
+![THINKPAD P14S hardware configuration](https://github.com/memoryfraction/Localized-LLM-RAG/blob/main/images/Thinkpad%20P14S%20Hardware.png?raw=true) 
 Figure 1. THINKPAD P14S hardware configuration
 5.2.1 Embed
 Find a file to be uploaded, such as xxx.pdf, and use Postman's post request to upload the file.
 ETF.pdf, file size: 17.915MB. Upload time: 1m 12.36s.
-
+![Embed result](https://github.com/memoryfraction/Localized-LLM-RAG/blob/main/images/Embed%20Post%20Request.png?raw=true) 
 Embed result image
 5.2.2 Query
 The query can be made to the LLM WebApi, and it is obvious that the answer comes from the uploaded "etf.pdf", because LLM is unlikely to know this information.
 One request takes 3 minutes and 45 seconds. The machine configuration is as shown below.
-
+![Query result](https://github.com/memoryfraction/Localized-LLM-RAG/blob/main/images/Query%20Post%20Request.png?raw=true) 
 Figure Query return information
 # QAs
 1 How to view uploaded file fragments in chromaDb database?
