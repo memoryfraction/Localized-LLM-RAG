@@ -26,7 +26,9 @@ Then perform the following steps
 Download moniconda
 Install miniconda
 Create a Python 3.10 virtual environment
-second create -p D:\ProgramData\PythonVirtualEnvs\rag python=3.11
+``` base
+create -p D:\ProgramData\PythonVirtualEnvs\rag python=3.10
+```
 
 * -p or --prefix → Specify the full path of the environment
 * python=3.10 → Use Python 3.10
